@@ -5,78 +5,86 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
-    android:layout_marginTop="20sp"
+    android:padding="15dp"
     tools:context=".MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:layout_weight="30">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:layout_gravity="left"
-    android:layout_weight="50"
-    >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="15">
-    <TextView
-        android:id="@+id/equipoA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textSize="20sp"
-        android:text="Equipo A" /></RelativeLayout>
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_weight="50"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="15">
+
+                    <TextView
+                        android:id="@+id/equipoA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Equipo A"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="15">
+
+                    <TextView
+                        android:id="@+id/puntuacionA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="0"
+                        android:textSize="50sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="35">
+
+                    <Button
+                        android:id="@+id/diezA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="+10 PUNTOS" />
+
+                    <Button
+                        android:id="@+id/cincoA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/diezA"
+                        android:layout_centerHorizontal="true"
+                        android:text="+5 PUNTOS" />
+
+                    <Button
+                        android:id="@+id/snitchA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cincoA"
+                        android:layout_centerHorizontal="true"
+                        android:text="SNITCH DORADA" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="15">
-    <TextView
-        android:id="@+id/puntuacionA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textSize="50sp"
-        android:text="0" /></RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="35">
-    <Button
-        android:id="@+id/diezA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="+10 PUNTOS" />
-
-    <Button
-        android:id="@+id/cincoA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/diezA"
-        android:layout_centerHorizontal="true"
-        android:text="+5 PUNTOS" />
-
-    <Button
-        android:id="@+id/snitchA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/cincoA"
-        android:layout_centerHorizontal="true"
-        android:text="SNITCH DORADA" /></RelativeLayout>
-    </LinearLayout>
-</RelativeLayout>
-
-    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="50"
