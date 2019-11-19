@@ -1,18 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:layout_marginTop="20sp"
     tools:context=".MainActivity">
 
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_gravity="left"
+    android:layout_weight="50"
+    >
     <TextView
+        android:id="@+id/equipoA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:text="Equipo A" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/puntuacionA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/equipoA"
+        android:layout_centerHorizontal="true"
+        android:textSize="50sp"
+        android:text="0" />
+
+    <Button
+        android:id="@+id/diezA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/puntuacionA"
+        android:layout_centerHorizontal="true"
+        android:text="+10 PUNTOS" />
+
+    <Button
+        android:id="@+id/cincoA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/diezA"
+        android:layout_centerHorizontal="true"
+        android:text="+5 PUNTOS" />
+
+    <Button
+        android:id="@+id/snitchA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cincoA"
+        android:layout_centerHorizontal="true"
+        android:text="SNITCH DORADA" />
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:layout_gravity="right"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/equipoB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:text="Equipo B" />
+
+        <TextView
+            android:id="@+id/puntuacionB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/equipoB"
+            android:textSize="50sp"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/diezB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/puntuacionB"
+            android:text="+10 PUNTOS" />
+
+        <Button
+            android:id="@+id/cincoB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/diezB"
+            android:text="+5 PUNTOS" />
+
+        <Button
+            android:id="@+id/snitchB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/cincoB"
+            android:text="SNITCH DORADA" />
+    </RelativeLayout>
+</LinearLayout>
