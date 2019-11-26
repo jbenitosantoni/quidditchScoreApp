@@ -12,60 +12,57 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
     private int puntosA = 0;
     private int puntosB = 0;
-    private boolean diez = false;
-    private boolean cinco = false;
-    private boolean esA = false;
-    private boolean esB = false;
+    private boolean diezA = false;
+    private boolean cincoA = false;
+    private boolean diezB = false;
+    private boolean cincoB = false;
     TextView puntuacionA;
-    Button diezA;
-    Button cincoA;
+    Button BdiezA;
+    Button BcincoA;
     Button snitchA;
     TextView puntuacionB;
-    Button diezB;
-    Button cincoB;
+    Button BdiezB;
+    Button BcincoB;
     Button snitchB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         puntuacionA = findViewById(R.id.PuntosA);
-        diezA = (Button)findViewById(R.id.DiezMasA);
-        cincoA = (Button)findViewById(R.id.CincoMasA);
-        snitchA = (Button)findViewById(R.id.snitchA);
-
+        snitchA = (Button) findViewById(R.id.snitchA);
         puntuacionB = findViewById(R.id.PuntosB);
-        diezB = (Button)findViewById(R.id.DiezMasB);
-        cincoB = (Button)findViewById(R.id.CincoMasB);
-        snitchB = (Button)findViewById(R.id.snitchB);
+        snitchB = (Button) findViewById(R.id.snitchB);
+        BdiezA = (Button) findViewById(R.id.DiezMasA);;
+        BcincoA = (Button) findViewById(R.id.CincoMasA);;
+        BdiezB = (Button) findViewById(R.id.DiezMasB);;
+        BcincoB = (Button) findViewById(R.id.CincoMasB);;
 
-        diezA.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                esA = true;
-                diez = true;
-            }
-        });
-        cincoA.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener suma = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                if (v.getId() == R.id.DiezMasA) {
+                    diezA = true;
+                    incrementar();
+                } else if (v.getId() == R.id.CincoMasA) {
+                    cincoA = true;
+                    incrementar();
+                } else if (v.getId() == R.id.DiezMasB) {
+                    diezB = true;
+                    incrementar();
+                } else if (v.getId() == R.id.CincoMasB) {
+                    cincoB = true;
+                    incrementar();
+                }
             }
-        });
+        };
+        BdiezA.setOnClickListener(suma);
+        BcincoA.setOnClickListener(suma);
+        BdiezB.setOnClickListener(suma);
+        BcincoB.setOnClickListener(suma);
+
         snitchA.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-
-        diezB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        cincoB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -77,13 +74,28 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-}
-    public void incrementar() {
+    }
 
+    public void incrementar() {
+        if (diezA == true) {
+            puntosA = puntosA + 10;
+            diezA = false;
+        } else if(cincoA == true) {
+            puntosA = puntosA + 5;
+            cincoA = false;
+        } else if (diezB == true) {
+            puntosB = puntosB + 10;
+            diezB = false;
+        } else if (cincoB == true){
+            puntosB = puntosB + 5;
+            cincoB = false;
         }
+    }
+
     public void resetear() {
 
     }
+
     public void snitch() {
 
     }
