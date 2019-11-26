@@ -122,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
         Toast ganaA = Toast.makeText(getApplicationContext(),"Ha ganado A", Toast.LENGTH_SHORT);
         ganaA.show();
         snitchA = false;
+        resetear();
     }else {
         Toast ganaB = Toast.makeText(getApplicationContext(),"Ha ganado B", Toast.LENGTH_SHORT);
         ganaB.show();
