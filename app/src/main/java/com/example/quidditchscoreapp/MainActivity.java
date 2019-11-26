@@ -28,14 +28,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        puntuacionA = findViewById(R.id.puntuacionA);
-        diezA = (Button)findViewById(R.id.diezA);
-        cincoA = (Button)findViewById(R.id.cincoA);
+        puntuacionA = findViewById(R.id.PuntosA);
+        diezA = (Button)findViewById(R.id.DiezMasA);
+        cincoA = (Button)findViewById(R.id.CincoMasA);
         snitchA = (Button)findViewById(R.id.snitchA);
 
-        puntuacionB = findViewById(R.id.puntuacionB);
-        diezB = (Button)findViewById(R.id.diezB);
-        cincoB = (Button)findViewById(R.id.cincoB);
+        puntuacionB = findViewById(R.id.PuntosB);
+        diezB = (Button)findViewById(R.id.DiezMasB);
+        cincoB = (Button)findViewById(R.id.CincoMasB);
         snitchB = (Button)findViewById(R.id.snitchB);
 
         diezA.setOnClickListener(new View.OnClickListener() {
